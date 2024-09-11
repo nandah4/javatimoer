@@ -32,6 +32,7 @@ public class ForLoop {
         }
 
         System.out.println("Jumlah huruf 'r' dalam array : " + totalsR);
-
+        System.out.println("");
+        System.out.println("Nanda Ganteng Jago JS Yuhu (>_<)");
     }
 }
