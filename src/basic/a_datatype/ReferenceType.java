@@ -17,5 +17,8 @@ public class ReferenceType {
         yourName = "John Doe";
         System.out.println(yourName);
 
+        int[] myNumberFav = { 1, 10, 2, 23, 88 };
+        System.out.println(myNumberFav[2]);
+
     }
 }
