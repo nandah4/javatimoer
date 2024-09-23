@@ -8,24 +8,47 @@ public class CountLongVacation {
     static String optionInner = "";
 
     static void hitungTanggalPulang() {
-        // .equals untuk membandingkan apakah kedua variabel memiliki nilai yang sama
+        // .equals untuk membandingkan apakah kedua variabel memiliki nilai String yang
+        // sama bukan referensi ke object yang sama
         do {
             if (!optionInner.equals("x") || optionInner.equals("a")) {
-                System.out.print("Masukkan tanggal berangkat anda : ");
-                int tanggalBerangkat = input.nextInt();
-                System.out.print("Masukkan bulan berangkat anda : ");
-                int bulanBerangkat = input.nextInt();
-                System.out.print("Masukkan tahun berangkat anda : ");
-                int tahunBerangkat = input.nextInt();
+                int tanggalBerangkat, bulanBerangkat, tahunBerangkat;
+                do {
+                    System.out.print("Masukkan tanggal berangkat anda : ");
+                    tanggalBerangkat = input.nextInt();
+
+                    if (tanggalBerangkat < 1 || tanggalBerangkat > 30) {
+                        System.out.println("Tanggal tidak boleh kurang dari 1 dan lebih dari 30");
+                    }
+
+                } while (tanggalBerangkat < 1 || tanggalBerangkat > 30);
+
+                do {
+                    System.out.print("Masukkan bulan berangkat anda : ");
+                    bulanBerangkat = input.nextInt();
+
+                    if (bulanBerangkat < 1 || bulanBerangkat > 12) {
+                        System.out.println("Bulan tidak boleh kurang dari 1 dan lebih dari 12");
+                    }
+                } while (bulanBerangkat < 1 || bulanBerangkat > 12);
+
+                do {
+                    System.out.print("Masukkan tahun berangkat anda : ");
+                    tahunBerangkat = input.nextInt();
+
+                    if (tahunBerangkat < 1) {
+                        System.out.println("Tahun berangkat tidak boleh kurang dari 1");
+                    }
+                } while (tahunBerangkat < 1);
 
                 System.out.println(
-                        "Hasil anda : " + tahunBerangkat + " " + bulanBerangkat + " " + tanggalBerangkat + "\n");
+                        "Tanggal berangkat anda : " + tanggalBerangkat + "-" + bulanBerangkat + "-" + tahunBerangkat);
 
                 System.out.print("Close (x) or Continue (a) : ");
                 optionInner = input.next();
                 System.out.println("");
             } else {
-                System.out.println("Keluar dari Hitung tanggal pulang");
+                System.out.println("Anda keluar dari Hitung tanggal pulang");
             }
 
         } while (!optionInner.equals("x") && optionInner.equals("a"));
