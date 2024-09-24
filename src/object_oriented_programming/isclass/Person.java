@@ -16,7 +16,8 @@ class Person {
         this.addres = paramsAddres;
     }
 
-    // Constructor Overloading (Membuat constructor lain dengan params berbeda)
+    // Constructor Overloading (Membuat constructor lain dengan nama sama tapi
+    // dengan params berbeda)
     Person(String paramsName) {
         // Calling constructor lain dengan keyword this
         this(paramsName, null);
@@ -27,12 +28,13 @@ class Person {
     }
 
     void sayHello() {
-        this.sayHello("Popa"); // Memanggil method sayHello dengan def params
+        this.sayHello("Default"); // Memanggil method sayHello dengan default params
     }
 
     // Method
-    void sayHello(String paramsName) {
-        System.out.println("Hello " + paramsName + ", My name is " + this.name + " from " + this.addres);
+    void sayHello(String name) {
+        // keyword this untuk sbg solusi untuk variabel shadowing
+        System.out.println("Hello " + name + ", My name is " + this.name + " from " + this.addres);
     }
 
 }

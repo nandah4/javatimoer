@@ -12,7 +12,7 @@ public class CountLongVacation {
         // sama bukan referensi ke object yang sama
         do {
             if (!optionInner.equals("x") || optionInner.equals("a")) {
-                int tanggalBerangkat, bulanBerangkat, tahunBerangkat;
+                int tanggalBerangkat, bulanBerangkat, tahunBerangkat, lamaHari;
                 do {
                     System.out.print("Masukkan tanggal berangkat anda : ");
                     tanggalBerangkat = input.nextInt();
@@ -43,6 +43,30 @@ public class CountLongVacation {
 
                 System.out.println(
                         "Tanggal berangkat anda : " + tanggalBerangkat + "-" + bulanBerangkat + "-" + tahunBerangkat);
+
+                do {
+                    System.out.println("\n----------------------------------------");
+                    System.out.print("Lama hari liburan anda : ");
+                    lamaHari = input.nextInt();
+
+                    if (lamaHari < 1) {
+                        System.out.println("Lama hari tidak boleh kurang dari 1");
+                    }
+                } while (lamaHari < 1);
+
+                int tanggalPulang, bulanPulang, tahunPulang;
+
+                int day = lamaHari % 30;
+                int month = lamaHari / 30;
+                int tahun = lamaHari / 360;
+
+                // int day = lamaHari % 30;
+
+                // if (day > 30) {
+                // bulanPulang = day + 1;
+                // }
+
+                System.out.println(month + " " + tahunBerangkat);
 
                 System.out.print("Close (x) or Continue (a) : ");
                 optionInner = input.next();

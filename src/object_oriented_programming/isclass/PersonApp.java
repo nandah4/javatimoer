@@ -7,7 +7,7 @@ public class PersonApp {
         // person1.addres = "Malang";
         // person1.name = "Spiet Maguwoharjo";
 
-        person1.sayHello(); // Cara mengakses method dalam object
+        person1.sayHello("Mika"); // Cara mengakses method dalam object
         // System.out.println(person1.name);
     }
 }
