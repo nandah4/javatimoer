@@ -1,4 +1,4 @@
-package mini_project;
+package Mini_Project;
 
 public class ToDoList {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package basic.a_datatype;
+package Basic.a_datatype;
 
 public class PrimitifType {
     public static void main(String[] args) {
