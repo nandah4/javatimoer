@@ -13,14 +13,14 @@ public class Latihan1 {
         System.out.print("Masukkan bilangan 3 ");
         int bilangan3 = sc.nextInt();
 
-        int result = 0;
+        int result;
 
         if (bilangan1 < bilangan2) {
             result = bilangan2;
             if (result < bilangan3) {
                 result = bilangan3;
             }
-        } else if (bilangan1 > bilangan2) {
+        } else {
             result = bilangan1;
             if (result < bilangan3) {
                 result = bilangan3;
